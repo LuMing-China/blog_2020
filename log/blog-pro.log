@@ -1,0 +1,4 @@
+2020-04-30 14:57:57.466  INFO 11952 --- [restartedMain] com.lrm.Blog2020Application              : Starting Blog2020Application on LAPTOP-9FPJD7HT with PID 11952 (D:\workspace_idea\blog_2020\target\classes started by 鹿 in D:\workspace_idea\blog_2020)
+2020-04-30 14:57:57.466  INFO 11952 --- [restartedMain] com.lrm.Blog2020Application              : The following profiles are active: pro
+2020-04-30 14:58:00.110  WARN 11952 --- [restartedMain] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-04-30 14:58:00.558  INFO 11952 --- [restartedMain] com.lrm.Blog2020Application              : Started Blog2020Application in 3.54 seconds (JVM running for 4.642)
