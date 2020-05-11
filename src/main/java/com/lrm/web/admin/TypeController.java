@@ -76,19 +76,12 @@ public class TypeController {
         if (result.hasErrors()) {
             return "admin/types-input";
         }
-        Type t = typeService.updateType(id,type);
+        Type t = typeService.saveType(type);
         if (t == null ) {
-            attributes.addFlashAttribute("message", "更新失败");
+            attributes.addFlashAttribute("message", "操作失败");
         } else {
-            attributes.addFlashAttribute("message", "更新成功");
+            attributes.addFlashAttribute("message", "操作成功");
         }
-        return "redirect:/admin/types";
-    }
-
-    @GetMapping("/types/{id}/delete")
-    public String delete(@PathVariable Long id,RedirectAttributes attributes) {
-        typeService.deleteType(id);
-        attributes.addFlashAttribute("message", "删除成功");
         return "redirect:/admin/types";
     }
 
