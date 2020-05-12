@@ -17,6 +17,9 @@ public class Blog {
     @GeneratedValue
     private Long id;
     private String title;
+
+    @Basic(fetch = FetchType.LAZY)
+    @Lob
     private String content;
     private String firstPicture;
     private String flag;
@@ -38,6 +41,10 @@ public class Blog {
     private User user;
     @OneToMany(mappedBy = "blog")
     private List<Comment> comments = new ArrayList<>();
+
+    //不用保存到数据库
+    @Transient
+    private String tagIds;
 
     public Blog() {
     }
@@ -176,6 +183,14 @@ public class Blog {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public String getTagIds() {
+        return tagIds;
+    }
+
+    public void setTagIds(String tagIds) {
+        this.tagIds = tagIds;
     }
 
     @Override
